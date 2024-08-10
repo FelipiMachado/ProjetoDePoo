@@ -1,0 +1,16 @@
+package projetoPt2;
+import java.util.Scanner;
+
+public class Sala {
+	
+	public static void main(String[] args) {
+		Scanner scanear = new Scanner(System.in);
+		//todos com Seus métodos imprimir
+		
+		System.out.println("digite os dados");
+		userNormal p1 = new userNormal(scanear.nextLine(),scanear.nextLine(),scanear.nextLine());
+		
+		scanear.close();
+	}
+	
+}

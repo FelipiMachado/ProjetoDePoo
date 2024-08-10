@@ -1,0 +1,42 @@
+package projetoPt2;
+
+public class userAdmin {
+	public String nome;
+	public String email;
+    private String nomeDaSala;
+    private String perfil;
+    private String dadosDaSala;
+    private boolean silenciarUsuario;
+    private String sala;
+
+    public userAdmin(String nome, String email) {
+        this.nome = nome;
+        this.email = email;
+    }
+
+    // Métodos para realizar as ações
+    public void mudarNomeDaSala(String novoNome) {
+        this.nomeDaSala = novoNome;
+    }
+
+    public void modificarPerfil(String novoPerfil) {
+        this.perfil = novoPerfil;
+    }
+
+    public void verDadosDaSala(String dados) {
+        this.dadosDaSala = dados;
+    }
+
+    public void silenciarUsuario() {
+        this.silenciarUsuario = true;
+    }
+
+    public void modificarSala(String novaSala) {
+        this.sala = novaSala;
+    }
+
+    // Outros métodos relevantes (por exemplo, visualizar dados da sala)
+
+    // Getters e setters para os atributos (opcional)
+    // ...
+}

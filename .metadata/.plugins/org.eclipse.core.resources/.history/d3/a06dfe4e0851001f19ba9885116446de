@@ -1,0 +1,68 @@
+package projetoPt2;
+
+public class userAdmin {
+	public String nome;
+	public String email;
+	public String nomeDaSala;
+	public String perfil;
+	public String dadosDaSala;
+	public boolean silenciarUsuario;
+	public String sala;
+
+    public userAdmin(String nome, String email) {
+        this.nome = nome;
+        this.email = email;
+    }
+
+    public void mudarNomeDaSala(String novoNome) {
+        this.nomeDaSala = novoNome;
+    }
+
+    public void modificarPerfil(String novoPerfil) {
+        this.perfil = novoPerfil;
+    }
+
+    public void verDadosDaSala(String dados) {
+        this.dadosDaSala = dados;
+    }
+
+    public void silenciarUsuario() {
+        this.silenciarUsuario = true;
+    }
+
+    public void modificarSala(String novaSala) {
+        this.sala = novaSala;
+    }
+    
+    public void banirUsuarioPermanentemente(String usuario) {
+    	System.out.println("Usuário " + usuario + " foi banido permanentemente.");
+    }
+
+    public void promoverModerador(String usuario) {
+        System.out.println("Usuário " + usuario + " foi promovido a moderador.");
+    }
+
+    public void rebaixarModerador(String usuario) {
+        System.out.println("Usuário " + usuario + " foi rebaixado de moderador.");
+    }
+    
+    public String getNome() {
+		return this.nome;
+    };
+    
+    public void Imprimir(userAdmin usu1) {
+    	System.out.println(usu1.nome);
+    	System.out.println(usu1.email);
+    	System.out.println(usu1.nomeDaSala);
+    }
+	/*
+	 * public static void main(String[] args) { userAdmin adm1 = new
+	 * userAdmin("nicoleAdmin", "nicoleadm@gmail.com");
+	 * 
+	 * System.out.println(adm1.getNome()); adm1.nomeDaSala = "labCad";
+	 * System.out.println(adm1.nomeDaSala);
+	 * 
+	 * adm1.modificarSala("lab6"); System.out.println(adm1.sala); }
+	 * 
+	 * 
+	 */}

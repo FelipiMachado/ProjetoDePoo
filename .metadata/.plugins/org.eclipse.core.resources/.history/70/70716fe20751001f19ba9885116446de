@@ -1,0 +1,17 @@
+package projetoPt2;
+
+public class Sala {
+	
+	public static void main(String[] args) {
+		userNormal p1 = new userNormal("felipi", "felipi@gmail.com", "ODEIO JAVA");
+		userModer user1 = new userModer("Nicole", "nicole@gmail.com");
+		userAdmin adm1 = new userAdmin("nicoleAdmin", "nicoleadm@gmail.com");
+		
+		p1.nome = "felipi";
+		p1.email = "felipi@gmail.com";
+		p1.descricao = "ODEIO JAVA";
+		
+		p1.Imprimir(p1);
+	}
+	
+}
