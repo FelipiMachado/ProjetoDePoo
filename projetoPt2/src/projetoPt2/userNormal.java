@@ -5,13 +5,7 @@ import java.util.Scanner;
 
 //- Implementação do esqueleto das classes necessárias no projeto;
 
-public class userNormal {
-
-// - Implementação dos atributos das classes considerando atributos simples e associações com outras classes;
-    public String nome;
-    public String email;
-    public String senha;
-    public String descricao;
+public class userNormal extends Usuarios{
     public String vistoPorUltimo;
    
     public ArrayList<userNormal> amigos = new ArrayList<>();
@@ -22,12 +16,12 @@ public class userNormal {
 
 //  construtores
     
-    public userNormal(String nome, String email, String senha, String descricao) {
-        this.nome = nome;
-        this.email = email;
-        this.senha = senha;
-        this.descricao = descricao;
-    };
+    public userNormal(String vistoPorUltimo, String nome, String email, String senha, String descricao) {
+		// TODO Auto-generated constructor stub
+    	super(nome, email, senha ,descricao);
+    	this.vistoPorUltimo = vistoPorUltimo;
+    	
+	}
 
     //Atualizar dados
     public String alterarNome() {
@@ -96,7 +90,7 @@ public class userNormal {
     }
 
 	public static userNormal ler() {
-		userNormal novoUser = new userNormal("","","","");
+		userNormal novoUser = new userNormal("","","","","");
 		  System.out.println("Novo usuario Normal !");
 		  
 		  System.out.print("Digite o seu nome: ");

@@ -7,13 +7,13 @@ public class Cadastro {
 	public static void main(String[] args) {
 		
 		  
- 		 userNormal novoUser = userNormal.ler();
+ //		 userNormal novoUser = userNormal.ler();
 //------------------------------------------------------------------------------------------------
 
-//		 userModer novoModer = userModer.ler();
+		 userModer novoModer = userModer.ler();
 
-		 novoUser.Imprimir();
-//		 novoModer.Imprimir(novoModer);
+//		 novoUser.Imprimir();
+		 novoModer.Imprimir();
 		
 	}
 }

@@ -13,9 +13,9 @@ public class Sala {
 		//todos com Seus métodos imprimir
 		
 		System.out.println("digite os dados");
-		userNormal p1 = new userNormal(scanear.nextLine(),scanear.nextLine(),scanear.nextLine(),scanear.nextLine());
+//		userNormal p1 = new userNormal(scanear.nextLine(),scanear.nextLine(),scanear.nextLine(),scanear.nextLine());
 		
-		p1.Imprimir();
+//	p1.Imprimir();
 		scanear.close();
 	}
 	

@@ -6,11 +6,8 @@ import java.util.Scanner;
 
 
 
-public class userAdmin {
+public class userAdmin extends Usuarios{
 
-	public String nome;
-	public String email;
-	public String senha;
 	public String nomeDaSala;
 	public String perfil;
 	public String dadosDaSala;
@@ -25,19 +22,11 @@ public class userAdmin {
 
 
 
-    public userAdmin(String nome, String email, String nomeSala, String senha) {
-
-        this.nome = nome;
-
-        this.email = email;
-
-        this.nomeDaSala = nomeSala;
-
-        this.senha = senha;
-
+    public userAdmin(String nomeDaSala, String dadosDaSala, String nome, String email, String senha, String descricao) {
+    	super(nome, email, senha, descricao);
+        this.nomeDaSala = nomeDaSala;
+        this.dadosDaSala = dadosDaSala;
     }
-
-
 
     public String mudarNomeDaSala() {
 
@@ -98,13 +87,9 @@ public class userAdmin {
     public void Imprimir() {
 
     	System.out.println("Nome do administrador: "+this.nome);
-
     	System.out.println("Email do administrador: "+this.email);
-
     	System.out.println("Nome da sala que criou: "+this.nomeDaSala);
-
     	System.out.println("Senha do administrador: "+this.senha);
-
     }
 
 }

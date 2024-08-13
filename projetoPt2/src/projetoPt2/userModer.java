@@ -1,28 +1,25 @@
 package projetoPt2;
 import java.util.Scanner;
 
-public class userModer {
-    public String nome;
-    public String email;
-    public String senha;
-    public String descricao;
+public class userModer extends Usuarios{
+
     public String fotoDaSala;
     public String descricaoDaSala;
-    public boolean permissaoParaOutraSala;
     public String informacoesDePerfil;
     public boolean usuarioNormal;
-
+    public boolean permissaoParaOutraSala = false;
+    
+    
     public static Scanner scanear = new Scanner(System.in);
     
-    public userModer(String nome, String email, String descricao, String senha) {
-        this.nome = nome;
-        this.email = email;
-        this.descricao = descricao;
-        this.senha= senha;
+    public userModer(String nome, String email, String senha, String descricao) {
+        super(nome, email, senha, descricao);
+
     }
 
-    
-    public void alterarNome() {
+
+
+	public void alterarNome() {
         this.nome = scanear.nextLine();
     }
 
@@ -73,6 +70,7 @@ public class userModer {
         System.out.println("Email do usuário: "+this.email);
         System.out.println("Senha: "+this.senha);
         System.out.println("Bio:\n"+this.descricao+"\n");
+        System.out.println("permissão: "+ this.permissaoParaOutraSala);
         System.out.println("-------------------------------------------------\n");
     }
 
@@ -92,8 +90,7 @@ public class userModer {
 		  
 		  System.out.print("Digite o sua Bio: ");
 		  usuario1.descricao = scanear.nextLine();
-		  	  
-		  
+  	  
 		return usuario1;
 	}
     
