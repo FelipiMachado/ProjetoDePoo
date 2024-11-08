@@ -1,0 +1,65 @@
+package BaseDesorganizada;
+import java.util.Scanner;
+
+public class Cadastro {
+	public static void main(String[] args) {
+// 		 menu		
+		
+		Scanner leitor = new Scanner(System.in);
+		
+		System.out.println("1- Cadastrar");
+		System.out.println("2- op 2");
+		System.out.println("3- Listar");
+		
+		int opcaoEscolhida = leitor.nextInt();
+		
+		Switch(opcaoEscolhida)
+			case 1:
+				return 1;
+			default:
+				return 2;
+				
+		
+		
+//		 userNormal novoUser1 = userNormal.ler();
+//		 userNormal novoUser2 = userNormal.ler();
+//		 userNormal novoUser3 = userNormal.ler();
+//
+//		 userModer novoModer1 = userModer.ler();
+//		 userModer novoModer2 = userModer.ler();
+//		 userModer novoModer3 = userModer.ler();
+//		 
+//		 userAdmin novoAdm1 = userAdmin.ler();
+//		 userAdmin novoAdm2 = userAdmin.ler();
+//		 userAdmin novoAdm3 = userAdmin.ler();
+// 		 
+//// ------------------------------------------------------------------------------------------------
+//		 //novoUser.Imprimir();
+// 		 //novoModer.Imprimir();
+// 		 //novoAdm.Imprimir();
+//
+// 		 //Publicacoes publi1 = new Publicacoes("oi como você está?", "Felipi");
+// 		 //publi1.imprimir();
+//		
+// 		 RedeSocial rede1 = new RedeSocial("Rede_Do_Tio_Vanius","www.odeioJava.com.br");
+// 		 rede1.addUsuNormal(novoUser1);
+// 		 rede1.addUsuNormal(novoUser2);
+// 		 rede1.addUsuNormal(novoUser3);
+// 		 rede1.mostrarUsuariosNormais();
+//
+// 		 rede1.addUsuModer(novoModer1);
+// 		 rede1.addUsuModer(novoModer2);
+// 		 rede1.addUsuModer(novoModer3);
+// 		 rede1.mostrarUsuariosModers();
+//
+// 		 
+// 		 rede1.addUsuAdmin(novoAdm1);
+// 		 rede1.addUsuAdmin(novoAdm2);
+// 		 rede1.addUsuAdmin(novoAdm3);
+// 		 rede1.mostrarUsuariosAdms();
+		
+		
+
+	}
+}
+

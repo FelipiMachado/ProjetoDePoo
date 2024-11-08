@@ -1,0 +1,107 @@
+package BaseDesorganizada;
+import java.util.Scanner;
+
+public class Cadastro {
+	public static void main(String[] args) {
+// 		 menu
+		RedeSocial ifsul = new RedeSocial("Aula Chata","www.com");
+		
+		Scanner leitor = new Scanner(System.in);
+		
+		System.out.println("1- Cadastrar");
+		System.out.println("2- Listar");
+		
+		int opcaoEscolhida = leitor.nextInt();
+		int opcaoDeUsuario = 0;
+		int opcaoListar = 0;
+		
+		switch (opcaoEscolhida) {
+		case 1: {
+			System.out.println("Qual usuario você quer cadastrar");
+			System.out.println("1- usuario normal");
+			System.out.println("2- usuario moder");
+			System.out.println("3- usuario admin");
+			opcaoDeUsuario = leitor.nextInt();
+			
+			if(opcaoDeUsuario == 1) {
+				userNormal user1 = userNormal.ler();
+				ifsul.addUsuNormal(user1);
+			}else if(opcaoDeUsuario == 2) {
+				userModer user2 = userModer.ler();
+				ifsul.addUsuModer(user2);
+			}else if(opcaoDeUsuario == 3) {
+				userAdmin user3 = userAdmin.ler();
+				ifsul.addUsuAdmin(user3);
+			}else {
+				
+				System.out.println("Digite uma opção válida! ");
+				//opcaoDeUsuario = leitor.nextInt();
+			}
+		}
+		case 2: {
+			System.out.println("Quais usuários você quer Listar");
+			System.out.println("1- usuarios normais");
+			System.out.println("2- usuarios moderadores");
+			System.out.println("3- usuarios administradores");			
+			opcaoListar = leitor.nextInt();
+			
+			if(opcaoListar == 1) {
+				ifsul.mostrarUsuariosNormais();
+			}else if(opcaoListar == 2) {
+				ifsul.mostrarUsuariosModers();
+			}else if(opcaoListar == 3) {
+				ifsul.mostrarUsuariosAdms();
+			} else {
+				System.out.println("Digite um numero válido! ");
+			}
+			
+			
+		}
+			
+		default:
+			System.out.println("Digite uma opção válida!");;
+		}
+		
+		
+//		 userNormal novoUser1 = userNormal.ler();
+//		 userNormal novoUser2 = userNormal.ler();
+//		 userNormal novoUser3 = userNormal.ler();
+//
+//		 userModer novoModer1 = userModer.ler();
+//		 userModer novoModer2 = userModer.ler();
+//		 userModer novoModer3 = userModer.ler();
+//		 
+//		 userAdmin novoAdm1 = userAdmin.ler();
+//		 userAdmin novoAdm2 = userAdmin.ler();
+//		 userAdmin novoAdm3 = userAdmin.ler();
+// 		 
+//// ------------------------------------------------------------------------------------------------
+//		 //novoUser.Imprimir();
+// 		 //novoModer.Imprimir();
+// 		 //novoAdm.Imprimir();
+//
+// 		 //Publicacoes publi1 = new Publicacoes("oi como você está?", "Felipi");
+// 		 //publi1.imprimir();
+//		
+// 		 RedeSocial rede1 = new RedeSocial("Rede_Do_Tio_Vanius","www.odeioJava.com.br");
+// 		 rede1.addUsuNormal(novoUser1);
+// 		 rede1.addUsuNormal(novoUser2);
+// 		 rede1.addUsuNormal(novoUser3);
+// 		 rede1.mostrarUsuariosNormais();
+//
+// 		 rede1.addUsuModer(novoModer1);
+// 		 rede1.addUsuModer(novoModer2);
+// 		 rede1.addUsuModer(novoModer3);
+// 		 rede1.mostrarUsuariosModers();
+//
+// 		 
+// 		 rede1.addUsuAdmin(novoAdm1);
+// 		 rede1.addUsuAdmin(novoAdm2);
+// 		 rede1.addUsuAdmin(novoAdm3);
+// 		 rede1.mostrarUsuariosAdms();
+		
+		
+
+	}
+}
+

@@ -1,0 +1,31 @@
+package BaseDesorganizada;
+
+/**
+ * Usuarios
+ */
+public class Usuarios {
+    public String nome;
+    public String email;
+    public String senha;
+    public String descricao;
+
+    public Usuarios(String nome, String email, String senha, String descricao) {
+        this.nome = nome;
+        this.email = email;
+        this.senha = senha; 
+        this.descricao = descricao;
+    }
+    
+    public void imprimir() {
+        System.out.println("Nome de usuário: "+this.nome);
+        System.out.println("Email do usuário: "+this.email);
+        System.out.println("Senha: "+ this.senha);
+        System.out.println("Descrição:\n"+this.descricao+"\n");
+    }
+    
+//    public Usuarios criarUser() {
+//    	
+//    }
+   
+}
+

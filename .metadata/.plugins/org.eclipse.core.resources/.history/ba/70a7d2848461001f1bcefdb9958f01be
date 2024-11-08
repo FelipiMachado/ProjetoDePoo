@@ -1,0 +1,119 @@
+package BaseDesorganizada;
+import java.util.Scanner;
+
+
+
+public class userAdmin extends Usuarios{
+
+	public String nomeDaSala;
+	public String perfil;
+	public String dadosDaSala;
+	public boolean silenciarUsuario;
+	public boolean banirUser = false;
+	public boolean promoveUser = false;
+	public String sala;
+
+	
+
+    public static Scanner scanear = new Scanner(System.in);
+
+
+
+    public userAdmin(String nomeDaSala, String dadosDaSala, String nome, String email, String senha, String descricao) {
+    	super(nome, email, senha, descricao);
+        this.nomeDaSala = nomeDaSala;
+        this.dadosDaSala = dadosDaSala;
+    }
+
+    public String mudarNomeDaSala() {
+
+        return this.sala = scanear.nextLine();
+
+    }
+
+
+
+    public String verDadosDaSala() {
+
+        return this.dadosDaSala = scanear.nextLine();
+
+    }
+
+
+    public Boolean silenciarUsuario() {
+
+        return this.silenciarUsuario = true;
+
+    }
+
+
+    public String modificarSala() {
+
+        return this.sala = scanear.nextLine();
+
+    }
+
+    
+
+    public Boolean banirUsuarioPermanentemente() {
+
+    	return this.banirUser = scanear.nextBoolean();
+
+    }
+
+
+
+    public Boolean promoverModerador() {
+
+        return this.promoveUser = true;
+
+    }
+
+
+
+//    public void rebaixarModerador(String usuario) {
+
+//        System.out.println("Usuário " + usuario + " foi rebaixado de moderador.");
+
+//    }
+
+    
+    public static userAdmin ler() {
+		  userAdmin adm1 = new userAdmin("","","","","","");
+		  
+		  System.out.println("");
+		  
+		  System.out.println("Novo usuario Administrador");		
+
+		  System.out.print("Digite o seu nome: ");
+		  adm1.setNome(scanear.nextLine());
+		  
+		  System.out.print("Digite o seu email: ");
+		  adm1.email = scanear.nextLine();
+		  
+		  System.out.println("Senha: ");
+		  adm1.senha = scanear.nextLine();
+		  
+		  System.out.print("Digite o sua Descrição: ");
+		  adm1.descricao = scanear.nextLine();
+
+		  System.out.print("Digite o Nome da Sala: ");
+		  adm1.nomeDaSala = scanear.nextLine();
+		  
+		  System.out.print("Digite a Descrição da Sala: ");
+		  adm1.dadosDaSala = scanear.nextLine();
+		
+		  System.out.println("");
+		  
+		  return adm1;
+    }
+    
+
+    public void Imprimir() {
+    	System.out.println("------- Novo Adm na Área! ---------");
+    	super.imprimir();
+    	System.out.println("Nome da Sala: "+nomeDaSala);
+    	System.out.println("Descrição da Sala: "+ dadosDaSala);
+    }
+
+}

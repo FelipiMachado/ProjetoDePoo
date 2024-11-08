@@ -1,0 +1,100 @@
+package BaseDesorganizada;
+import java.util.Scanner;
+
+public class Cadastro {
+    static ArrayList<Usuario> usuariosNormais = new ArrayList<>();
+    static ArrayList<Usuario> moderadores = new ArrayList<>();
+    static ArrayList<Usuario> administradores = new ArrayList<>();
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int opcao;
+
+        do {
+            System.out.println("Menu:");
+            System.out.println("1. Cadastrar um novo usuário");
+            System.out.println("2. Listar usuários cadastrados");
+            System.out.println("0. Sair");
+            System.out.print("Escolha uma opção: ");
+            opcao = scanner.nextInt();
+            scanner.nextLine(); // Consumir a nova linha
+
+            switch (opcao) {
+                case 1:
+                    cadastrarUsuario(scanner);
+                    break;
+                case 2:
+                    listarUsuarios(scanner);
+                    break;
+                case 0:
+                    System.out.println("Saindo...");
+                    break;
+                default:
+                    System.out.println("Opção inválida. Tente novamente.");
+            }
+        } while (opcao != 0);
+
+        scanner.close();
+    }
+
+    public static void cadastrarUsuario(Scanner scanner) {
+        System.out.println("Escolha o tipo de usuário para cadastrar:");
+        System.out.println("1. Usuário normal");
+        System.out.println("2. Moderador");
+        System.out.println("3. Administrador");
+        System.out.print("Escolha uma opção: ");
+        int tipo = scanner.nextInt();
+        scanner.nextLine(); // Consumir a nova linha
+
+        System.out.print("Digite o nome do usuário: ");
+        String nome = scanner.nextLine();
+
+        switch (tipo) {
+            case 1:
+                usuariosNormais.add(new Usuario(nome, "Normal"));
+                break;
+            case 2:
+                moderadores.add(new Usuario(nome, "Moderador"));
+                break;
+            case 3:
+                administradores.add(new Usuario(nome, "Administrador"));
+                break;
+            default:
+                System.out.println("Tipo inválido. Usuário não cadastrado.");
+        }
+    }
+
+    public static void listarUsuarios(Scanner scanner) {
+        System.out.println("Escolha a lista de usuários para exibir:");
+        System.out.println("1. Usuários normais");
+        System.out.println("2. Moderadores");
+        System.out.println("3. Administradores");
+        System.out.print("Escolha uma opção: ");
+        int tipo = scanner.nextInt();
+        scanner.nextLine(); // Consumir a nova linha
+
+        switch (tipo) {
+            case 1:
+                imprimirLista(usuariosNormais);
+                break;
+            case 2:
+                imprimirLista(moderadores);
+                break;
+            case 3:
+                imprimirLista(administradores);
+                break;
+            default:
+                System.out.println("Tipo inválido.");
+        }
+    }
+
+    public static void imprimirLista(ArrayList<Usuario> lista) {
+        if (lista.isEmpty()) {
+            System.out.println("Nenhum usuário cadastrado.");
+        } else {
+            for (Usuario usuario : lista) {
+                System.out.println(usuario);
+            }
+        }
+    }
+}

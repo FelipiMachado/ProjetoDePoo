@@ -1,0 +1,7 @@
+package BaseDesorganizada;
+import java.util.Scanner;
+
+public class Cadastro {
+    public static void main(String[] args) {
+    	}
+}

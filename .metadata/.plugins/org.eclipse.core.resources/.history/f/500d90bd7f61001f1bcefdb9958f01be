@@ -1,0 +1,111 @@
+package BaseDesorganizada;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+//- Implementação do esqueleto das classes necessárias no projeto;
+
+public class userNormal extends Usuarios{
+    public String vistoPorUltimo;
+   
+    public ArrayList<userNormal> amigos = new ArrayList<>();
+    public ArrayList<userNormal> perfisFavoritos = new ArrayList<>();
+    public ArrayList<Mensagem> mensagem = new ArrayList<>();
+   
+    public static Scanner leitor = new Scanner(System.in);
+
+//  construtores
+    
+    public userNormal(String vistoPorUltimo, String nome, String email, String senha, String descricao) {
+		// TODO Auto-generated constructor stub
+    	super(nome, email, senha ,descricao);
+    	this.vistoPorUltimo = vistoPorUltimo;
+    	
+	}
+
+    //Atualizar dados
+    public String alterarNome() {
+        return this.nome = leitor.nextLine();
+    };
+
+    public String alterarEmail() {
+    return this.nome = leitor.nextLine();
+    };
+
+    public String alterarDescricao() {
+        return this.descricao = leitor.nextLine();
+    };
+
+    public ArrayList<userNormal> getAmigos() {
+        return amigos;
+    };
+
+    public ArrayList<userNormal> getPerfisFavoritos() {
+        return perfisFavoritos;
+    };
+
+    //Visitar sala
+    public boolean visitarSala(String sala, boolean permissaoAdministrador) {
+   
+        if (permissaoAdministrador) {
+       
+        System.out.println("Visitando a sala: " + sala);
+            return true;
+           
+        } else {
+       
+            System.out.println("Permissão negada para visitar a sala: " + sala);
+            return false;
+        }
+    }
+   
+    public void enviarMensagem(String mensagem) {
+        System.out.println("Mensagem enviada: " + mensagem);
+    }
+
+    public void reagirComEmoji(String emoji) {
+        System.out.println("Reagindo com emoji: " + emoji);
+    }
+
+    public void enviarAudio(String audio) {
+        System.out.println("Áudio enviado: " + audio);
+    }
+
+    public void enviarVideo(String video) {
+        System.out.println("Vídeo enviado: " + video);
+    }
+
+    public void enviarFoto(String foto) {
+        System.out.println("Foto enviada: " + foto);
+    }
+   
+//  - Implementação de um método que imprime os dados de um objeto já preenchido (como exemplo de dado de código em aula).
+
+    public void Imprimir() {
+        System.out.println("----------usuario Cadastrado com sucesso!----------------\n");
+        super.imprimir();
+
+    }
+    
+	public static userNormal ler() {
+		userNormal novoUser = new userNormal("","","","","");
+		
+		  System.out.println("");
+		
+		  System.out.println("Novo usuario Normal !");
+		  
+		  System.out.print("Digite o seu nome: ");
+		  novoUser.nome = leitor.nextLine();
+		  
+		  System.out.print("Digite o seu email: ");
+		  novoUser.email = leitor.nextLine();
+		  
+		  System.out.println("Digite a sua Senha: ");
+		  novoUser.senha = leitor.nextLine();
+		  System.out.print("Digite o sua Descrição: ");
+		  novoUser.descricao = leitor.nextLine();
+		  return novoUser;
+	}
+   
+//  -Implementação de um método que lê os dados e cria um objeto em cada classe (como exemplo de dado de código em aula);
+}
